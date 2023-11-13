@@ -30,6 +30,11 @@ public class ProjectOne
         }
     }
 
+    /**
+     * createTable - creates a Table with attributes; name, email, age, location, designation.
+     *
+     * Return: void
+     */
     public static void createTable(Statement statement) throws SQLException
     {
             statement.execute("CREATE TABLE IF NOT EXISTS UserData(name Text not null, email Text not null, age Integer, location Text," +
@@ -37,6 +42,13 @@ public class ProjectOne
             System.out.println("\nTable created Successfully!\n");
     }
 
+    /**
+     * populateTable - populate a table  already created with rows.
+     *
+     * @rowCount: number of rows added into table
+     *
+     * Return: @rowCount
+     */
     public static int populateTable(Connection connection) throws SQLException
     {
         int rowCount = 0;
